@@ -1,0 +1,23 @@
+<div style="margin-bottom: 15px;">
+  Hi Admin, 
+</div>
+
+<div style="margin-bottom: 15px;">
+  <%= @contact.first_name + ' ' + @contact.last_name %> sent a message:
+</div>
+
+<div style="margin-bottom: 15px;">
+  <%= @contact.message %>
+</div>
+
+<div>
+  Contact Infromation:
+</div>
+<div>
+  Email: <%= @contact.email%>
+</div>
+<% if @contact.phone_number.present? %>
+  <div>
+    Phone Number: <%= @contact.phone_number %>
+  </div>
+<% end %>
