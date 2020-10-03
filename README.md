@@ -1,24 +1,44 @@
-# README
+# Contact Sample App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Sample Web Application built on Ruby on Rails to submit user details.
 
-Things you may want to cover:
+# Installation Steps
 
-* Ruby version
+## Step 1 - Install prerequisites
 
-* System dependencies
+Install Ruby-2.6.4
 
-* Configuration
+    $ rvm install 2.7.1
 
-* Database creation
+## Step 2 - Clone the Repository
 
-* Database initialization
+    $ git clone https://github.com/bprateek10/contact_sample_app.git
+    $ cd online-forum
 
-* How to run the test suite
+## Step 3 - Bundle
 
-* Services (job queues, cache servers, search engines, etc.)
+Run following commands on terminal in your root directory
 
-* Deployment instructions
+    $ gem install bundler
+    $ bundle install
 
-* ...
+## Step 4 - Create database
+
+Create database.yml file in config folder from database.yml.example present in config folder itself. Replace the databse username and password with your's credentials
+
+Now in terminal run following commands
+
+    $ rails db:create
+    $ rails db:migrate
+
+## Step 5 - Run rails server
+
+You can run Rails server by running following command in terminal in root directory
+
+    $ rails server
+
+Also run the webpack dev server for assets compilation in development mode using following command in root directory
+
+    $ ./bin/webpack-dev-server
+
+Now the application is running on http://localhost:3000.
