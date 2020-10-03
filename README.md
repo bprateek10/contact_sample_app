@@ -6,7 +6,7 @@ A Sample Web Application built on Ruby on Rails to submit user details.
 
 ## Step 1 - Install prerequisites
 
-Install Ruby-2.6.4
+Install Ruby-2.7.1
 
     $ rvm install 2.7.1
 
