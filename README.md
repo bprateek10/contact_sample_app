@@ -31,13 +31,19 @@ Now in terminal run following commands
     $ rails db:create
     $ rails db:migrate
 
-## Step 5 - Run rails server
+## Step 5 - Install Dependencies
+
+Install all the dependencies by running following command:
+
+    $ yarn install
+
+## Step 6 - Run rails server
 
 You can run Rails server by running following command in terminal in root directory
 
     $ rails server
 
-Also run the webpack dev server for assets compilation in development mode using following command in root directory
+Also run the webpack dev server on different tab for assets compilation in development mode using following command in root directory
 
     $ ./bin/webpack-dev-server
 
