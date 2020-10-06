@@ -1,8 +1,9 @@
 class Contact < ApplicationRecord
 
   #Validations
-  validates_presence_of :first_name, :last_name, :email, :message
+  validates_presence_of :first_name, :last_name, :email, :message, :message => :blank
 
+  #Callbacks
   after_create :send_email
 
 

@@ -4,6 +4,7 @@ RSpec.describe ContactsController, type: :controller do
   let(:params){{format: :html}}
   let(:attr_params){{
     format: :html,
+    locale: 'en',
     contact: {
       first_name: 'test',
       last_name: 'user',
@@ -23,7 +24,7 @@ RSpec.describe ContactsController, type: :controller do
 
   describe 'POST create success' do
     before do
-      get 'create', {params: attr_params}
+      post 'create', {params: attr_params}
     end
 
     it{expect(response.code).to eq('302')}
@@ -34,7 +35,7 @@ RSpec.describe ContactsController, type: :controller do
   describe 'POST create fail' do
     before do
       attr_params[:contact][:first_name]  = nil
-      get 'create', {params: attr_params}
+      post 'create', {params: attr_params}
     end
 
     it{expect(response.code).to eq('302')}

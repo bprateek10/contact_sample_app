@@ -1,97 +1,95 @@
 <div class="container-contact100">
-		<div class="wrap-contact100">
-			<%= form_with model: @contact, class: 'contact100-form validate-form', local: true do |f| %>
-				<%= select_tag "credit_card", options_for_select([["English", '/en'], ['Russian', "/ru" ]], params[:locale] == 'ru' ? '/ru' : '/en') , onchange: "location = this.value;" %>
-				<span class="contact100-form-title">
-					<%= t :form_title%>
-				</span>
-				
-				<label class="label-input100" for="first-name"><%= t :name_label%></label>
-				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="<%= t :first_name_error_message %>">
-					<%= f.text_field :first_name, class: 'input100', placeholder: "#{t :first_name_placeholder}" %>	
-					<span class="focus-input100"></span>
-				</div>
-				<div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="<%= t :last_name_error_message %>">
-					<%= f.text_field :last_name, class: 'input100', placeholder: "#{t :last_name_placeholder}" %>
-					<span class="focus-input100"></span>
-				</div>
+	<div class="wrap-contact100">
+		<%= form_with model: @contact, class: 'contact100-form validate-form', local: true do |f| %>
+			<%= select_tag "credit_card", options_for_select([["English", '/en'], ['Russian', "/ru" ]], params[:locale] == 'ru' ? '/ru' : '/en') , onchange: "location = this.value;" %>
+			<span class="contact100-form-title">
+				<%= t :form_title %>
+			</span>
+			
+			<label class="label-input100" for="first-name"><%= t :name_label%></label>
+			<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="<%= t :first_name_error_message %>">
+				<%= f.text_field :first_name, class: 'input100', placeholder: "#{t :first_name_placeholder}" %>	
+				<span class="focus-input100"></span>
+			</div>
+			<div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="<%= t :last_name_error_message %>">
+				<%= f.text_field :last_name, class: 'input100', placeholder: "#{t :last_name_placeholder}" %>
+				<span class="focus-input100"></span>
+			</div>
 
-				<label class="label-input100" for="email"><%= t :email_label%></label>
-				<div class="wrap-input100 validate-input" data-validate = "<%= t :email_validation_message %>">
-					<%= f.email_field :email, class: 'input100', placeholder: "#{t :email_placeholder}" %>
-					<span class="focus-input100"></span>
-				</div>
+			<label class="label-input100" for="email"><%= t :email_label%></label>
+			<div class="wrap-input100 validate-input" data-validate = "<%= t :email_validation_message %>">
+				<%= f.email_field :email, class: 'input100', placeholder: "#{t :email_placeholder}" %>
+				<span class="focus-input100"></span>
+			</div>
 
-				<label class="label-input100" for="phone"><%= t :phone_number_label%></label>
-				<div class="wrap-input100">
-					<%= f.text_field :phone_number, class: 'input100', placeholder: "#{t :phone_number_placeholder}" %>
-					<span class="focus-input100"></span>
-				</div>
+			<label class="label-input100" for="phone"><%= t :phone_number_label%></label>
+			<div class="wrap-input100">
+				<%= f.text_field :phone_number, class: 'input100', placeholder: "#{t :phone_number_placeholder}" %>
+				<span class="focus-input100"></span>
+			</div>
 
-				<label class="label-input100" for="message"><%= t :message_label%></label>
-				<div class="wrap-input100 validate-input" data-validate = "<%= t :message_validation_message %>">
-					<%= f.text_area :message, placeholder: "#{t :message_placeholder}", class: 'input100'%>
-					<span class="focus-input100"></span>
-				</div>
+			<label class="label-input100" for="message"><%= t :message_label%></label>
+			<div class="wrap-input100 validate-input" data-validate = "<%= t :message_validation_message %>">
+				<%= f.text_area :message, placeholder: "#{t :message_placeholder}", class: 'input100'%>
+				<span class="focus-input100"></span>
+			</div>
 
-				<div class="container-contact100-form-btn">
-					<%= f.submit "#{t :form_submit_text}", class: 'contact100-form-btn' %>
-				</div>
-			<% end %>
+			<div class="container-contact100-form-btn">
+				<%= f.submit "#{t :form_submit_text}", class: 'contact100-form-btn' %>
+			</div>
+		<% end %>
 
-			<div class="contact100-more flex-col-c-m" style='background-image: url(assets/bg-01.jpg);'>
-				<div class="flex-w size1 p-b-47">
-					<div class="txt1 p-r-25">
-						<span class="lnr lnr-map-marker"></span>
-					</div>
-
-					<div class="flex-col size2">
-						<span class="txt1 p-b-20">
-							<%= t :address_text %>
-						</span>
-
-						<span class="txt2">
-							<%= t :office_address %>
-						</span>
-					</div>
+		<div class="contact100-more flex-col-c-m" style='background-image: url(assets/bg-01.jpg);'>
+			<div class="flex-w size1 p-b-47">
+				<div class="txt1 p-r-25">
+					<span class="lnr lnr-map-marker"></span>
 				</div>
 
-				<div class="dis-flex size1 p-b-47">
-					<div class="txt1 p-r-25">
-						<span class="lnr lnr-phone-handset"></span>
-					</div>
+				<div class="flex-col size2">
+					<span class="txt1 p-b-20">
+						<%= t :address_text %>
+					</span>
 
-					<div class="flex-col size2">
-						<span class="txt1 p-b-20">
-							<%= t :lets_talk_text %>
-						</span>
+					<span class="txt2">
+						<%= t :office_address %>
+					</span>
+				</div>
+			</div>
 
-						<span class="txt3">
-							+1 800 1236879
-						</span>
-					</div>
+			<div class="dis-flex size1 p-b-47">
+				<div class="txt1 p-r-25">
+					<span class="lnr lnr-phone-handset"></span>
 				</div>
 
-				<div class="dis-flex size1 p-b-47">
-					<div class="txt1 p-r-25">
-						<span class="lnr lnr-envelope"></span>
-					</div>
+				<div class="flex-col size2">
+					<span class="txt1 p-b-20">
+						<%= t :lets_talk_text %>
+					</span>
 
-					<div class="flex-col size2">
-						<span class="txt1 p-b-20">
-							<%= t :general_support_text%>
-						</span>
+					<span class="txt3">
+						+1 800 1236879
+					</span>
+				</div>
+			</div>
 
-						<span class="txt3">
-							contact@example.com
-						</span>
-					</div>
+			<div class="dis-flex size1 p-b-47">
+				<div class="txt1 p-r-25">
+					<span class="lnr lnr-envelope"></span>
+				</div>
+
+				<div class="flex-col size2">
+					<span class="txt1 p-b-20">
+						<%= t :general_support_text%>
+					</span>
+
+					<span class="txt3">
+						contact@example.com
+					</span>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 
-
-
-	<div id="dropDownSelect1"></div>
+<div id="dropDownSelect1"></div>
 	

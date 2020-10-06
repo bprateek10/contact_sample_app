@@ -19,3 +19,22 @@ ru:
   office_address: "Mada Center 8-й этаж, 379 Hudson St, New York, NY 10018 US"
   lets_talk_text: "Давай поговорим"
   general_support_text: "Общая поддержка"
+  activerecord:
+    attributes:
+      contact:
+        first_name: "Имя"
+        last_name: "Фамилия"
+        email: "Эл. адрес"
+        message: "сообщение"
+    errors:
+      models:
+        contact:
+          attributes:
+            first_name:
+              blank: "не может быть пустым"
+            last_name:
+              blank: "не может быть пустым"
+            email:
+              blank: "не может быть пустым"
+            message:
+              blank: "не может быть пустым"
